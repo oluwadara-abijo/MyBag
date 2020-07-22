@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MyBag</string>
     <string name="product_image">Product image</string>
+    <string name="reference">"Reference: "</string>
+    <string name="add_to_bag">Add to Bag</string>
+    <string name="waterproof">Waterproof</string>
+    <string name="_41mm_steel_case">41mm steel case</string>
+    <string name="automatic">Automatic</string>
+    <string name="_5_year_guarantee">5 year guarantee</string>
+    <string name="description">Introduced at Baseworld 2017, this elegant sporty watch captures the essence of Black Bay watch in a more formal version</string>
 </resources>
