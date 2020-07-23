@@ -1,18 +1,24 @@
 package com.dara.mybag
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.list_item_product.*
+import kotlinx.android.synthetic.main.fragment_product_detail.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_item_product)
+        setContentView(R.layout.fragment_product_detail)
 
         setupImagesRecyclerView()
+
+        btn_add_to_bag.setOnClickListener {
+            val intent = Intent(this, CheckoutActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupImagesRecyclerView() {

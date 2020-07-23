@@ -16,7 +16,7 @@
 
     <TextView
         android:id="@+id/tv_feature_name"
-        style="@style/TexStyle"
+        style="@style/TextStyle"
         android:layout_width="0dp"
         android:gravity="center"
         android:layout_marginVertical="@dimen/margin_8"
