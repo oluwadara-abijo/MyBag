@@ -6,12 +6,50 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_product_detail.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        lateinit var products: List<Product>
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_product_detail)
+        setContentView(R.layout.activity_main)
+
+        products = arrayListOf(
+            Product(
+                listOf(R.drawable.img_watch, R.drawable.img_watch, R.drawable.img_watch),
+                "Tudor Black Bay",
+                "$658.00",
+                "m7904-1558",
+                "Introduced at Baseworld 2017, this elegant sporty watch captures the " +
+                        "essence of Black Bay watch in a more formal version",
+                false,
+                listOf(
+                    Feature(R.drawable.ic_baseline_security_24, "5 year guarantee"),
+                    Feature(R.drawable.ic_baseline_autorenew_24, "Automatic"),
+                    Feature(R.drawable.ic_baseline_panorama_wide_angle_24, "41mm steel case"),
+                    Feature(R.drawable.ic_baseline_local_drink_24, "Waterproof")
+                )
+            ),
+            Product(
+                listOf(R.drawable.img_watch, R.drawable.img_watch, R.drawable.img_watch),
+                "Tudor Black Bay",
+                "$658.00",
+                "m7904-1558",
+                "Introduced at Baseworld 2017, this elegant sporty watch captures the " +
+                        "essence of Black Bay watch in a more formal version",
+                false,
+                listOf(
+                    Feature(R.drawable.ic_baseline_security_24, "5 year guarantee"),
+                    Feature(R.drawable.ic_baseline_autorenew_24, "Automatic"),
+                    Feature(R.drawable.ic_baseline_panorama_wide_angle_24, "41mm steel case"),
+                    Feature(R.drawable.ic_baseline_local_drink_24, "Waterproof")
+                )
+            )
+        )
 
         setupImagesRecyclerView()
 

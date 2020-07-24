@@ -6,7 +6,7 @@ data class Product(
     val amount: String,
     val reference: String,
     val description: String,
-    val isFavourite: Boolean,
+    val isFavourite: Boolean? = false,
     val features: List<Feature>
 )
 
