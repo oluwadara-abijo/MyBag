@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,23 +17,26 @@
             android:layout_height="0dp"
             android:background="@drawable/bg_grey_card"
             app:layout_constraintBottom_toTopOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_item_product_image" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_32"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
             app:layout_constraintStart_toStartOf="@id/rv_product_images"
-            app:layout_constraintTop_toTopOf="@id/rv_product_images"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+            app:layout_constraintTop_toTopOf="@id/rv_product_images" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_32"
+            android:contentDescription="@string/favourite"
+            android:src="@drawable/ic_baseline_favorite_border_24"
             app:layout_constraintEnd_toEndOf="@id/rv_product_images"
-            app:layout_constraintTop_toTopOf="@id/rv_product_images"
-            android:src="@drawable/ic_baseline_favorite_border_24"/>
+            app:layout_constraintTop_toTopOf="@id/rv_product_images" />
 
         <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
             android:id="@+id/indicator"
@@ -58,7 +61,6 @@
             style="@style/TextStyle"
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginTop="@dimen/margin_16"
-            android:text="Tudor Black Bay"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
@@ -80,7 +82,6 @@
             android:layout_width="0dp"
             android:layout_marginTop="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_16"
-            android:text="m7904-1558"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
             app:layout_constraintStart_toEndOf="@id/tv_reference_label"
             app:layout_constraintTop_toBottomOf="@id/tv_product_name" />
@@ -98,7 +99,6 @@
             android:layout_width="0dp"
             android:layout_marginEnd="@dimen/margin_16"
             android:gravity="end"
-            android:text="$658.00"
             android:textColor="@color/colorRed"
             android:textSize="18sp"
             android:textStyle="bold"

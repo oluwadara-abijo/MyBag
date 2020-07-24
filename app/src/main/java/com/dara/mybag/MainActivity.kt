@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+        populateUI()
         setupImagesRecyclerView()
 
         btn_add_to_bag.setOnClickListener {
@@ -70,5 +71,13 @@ class MainActivity : AppCompatActivity() {
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(rv_product_images)
         indicator.attachToRecyclerView(rv_product_images)
+    }
+
+    private fun populateUI(){
+        val product = products[0]
+        tv_product_name.text = product.name
+        tv_product_reference.text =  product.reference
+        tv_product_amount.text = product.amount
+        tv_product_description.text = product.description
     }
 }
